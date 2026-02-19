@@ -1,0 +1,50 @@
+# Папка с зависимостями (обязательно!)
+node_modules/
+
+# Файл с секретными переменными окружения (обязательно!)
+.env
+
+# Логи и временные файлы
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Директории с отладочной информацией (например, при использовании VSCode)
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Директории для сборки (если позже будешь использовать TypeScript или сборщики)
+dist/
+build/
+
+# Supabase CLI (локальная разработка)
+.supabase/
+
+# Логи приложения (если будешь писать в файлы)
+logs/
+*.log.gz
+
+# Файлы npm (дополнительно)
+.npm/
+.eslintcache
+
+# Покрытие тестами (на будущее)
+coverage/
+.nyc_output
+
+# Секреты (расширенный список, на всякий случай)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
