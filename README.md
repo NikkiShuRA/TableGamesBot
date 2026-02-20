@@ -37,7 +37,7 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/NikkiShuRA/TableGamesBot.git
    cd TableGamesBot
    ```
 2. **Установите зависимости:**
@@ -46,13 +46,23 @@
     ```
 3. **Настройка окружения:**
 
-    Создайте файл .env в корне проекта:
-    ```env
-    BOT_TOKEN=your_telegram_bot_token
-    SUPABASE_URL=your_project_url
-    SUPABASE_KEY=your_anon_key
-    ```
+   Создайте файл .env в корне проекта:
+   ```env
+   # --- Telegram Bot Настройки ---
+   # Получить у @BotFather
+   BOT_TOKEN=123456789:ABCDefGhIJKlmNoPQRstUVwxYZ
+   
+   # --- Supabase Настройки ---
+   # Найти в Project Settings -> API
+   SUPABASE_URL=https://your-project-id.supabase.co
+   # Используй anon_key для клиента
+   SUPABASE_KEY=your-supabase-anon-key
+   
+   # --- Настройки логирования (Pino) ---
+   # Уровень логирования: info, debug, production
+   LOG_LEVEL=info
+   ```
 4. **Запуск:**
     ```bash
-    node index.js
+    node src/index.js
     ```
