@@ -1,7 +1,7 @@
 const startHandler = require('./start');
 
 function setupHandlers(bot) {
-    bot.start(startHandler);
+    bot.command("start", startHandler);
 }
 
 module.exports = { setupHandlers };
