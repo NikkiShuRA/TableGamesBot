@@ -24,7 +24,7 @@
 | Технология | Описание |
 |------------|----------|
 | ![Node.js](https://img.shields.io/badge/Node.js-24.13.1-green) | Среда выполнения |
-| ![Telegraf](https://img.shields.io/badge/Telegraf-4.16.3-blue) | Фреймворк для Telegram Bot API |
+| ![Grammy](https://img.shields.io/badge/Grammy-1.40.0-blue) | Библиотека для создания Telegram-ботов |
 | ![Supabase](https://img.shields.io/badge/Supabase-2.97.0-black) | База данных и аутентификация |
 
 ### Вспомогательные библиотеки
@@ -33,7 +33,7 @@
 
 ---
 
-### 📦 Быстрый старт (он пока вообще не быстрый)
+### 📦 Быстрый старт
 
 1. **Клонируйте репозиторий:**
    ```bash
