@@ -1,6 +1,6 @@
-const { getWelcomeMessage } = require('./../constants')
+const { getStartMessage } = require('../constants')
 
-module.exports = (ctx) => {
-    const message = getWelcomeMessage(ctx);
-    ctx.reply(message);
+module.exports = async (ctx) => {
+    const message = getStartMessage(ctx);
+    await ctx.reply(message);
 };

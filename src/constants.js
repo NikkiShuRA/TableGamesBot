@@ -1,6 +1,10 @@
 module.exports = {
-    getWelcomeMessage: (ctx) => {
+    getStartMessage: (ctx) => {
         const username = ctx.from?.username || 'пользователь';
-        return `Доброго времени суток, ${ctx.from?.username}!`;
+        return `Доброго времени суток, ${username}!`;
+    },
+    getHelpMessage: (ctx) => {
+        const header = "Список команд:\n";
+        return header;
     }
 }
