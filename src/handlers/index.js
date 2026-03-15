@@ -1,7 +1,15 @@
-import startHandler from './start';
-import helpHandler from './help';
-import commandRegistry from './registry';
+import startHandler from './start.js';
+import helpHandler from './help.js';
+import commandRegistry from '../registry.js';
 
+/**
+ * Создаёт объект команды с заданными параметрами.
+ *
+ * @param {string} trigger триггер команды.
+ * @param {function} handler функция обработчик команды.
+ * @param {string} description описание команды.
+ * @return {object} объект команды.
+ */
 function createCommandObject(trigger, handler, description) {
     return {
         trigger: trigger,
@@ -10,6 +18,11 @@ function createCommandObject(trigger, handler, description) {
     }
 }
 
+/**
+ * Настраивает обработчики команд для бота.
+ *
+ * @param {object} bot объект бота, для которого настраиваются обработчики.
+ */
 function setupHandlers(bot) {
     commandRegistry.setup(
         bot,
