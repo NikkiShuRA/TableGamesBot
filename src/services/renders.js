@@ -1,5 +1,3 @@
-import commandRegistry from '../registry.js';
-
 /**
  * Возвращает приветственное сообщение для пользователя.
  *
@@ -7,14 +5,9 @@ import commandRegistry from '../registry.js';
  * @return {string} приветственное сообщение для пользователя.
  */
 function renderStartMessage(user) {
-    try {
-        const username = user?.username || 'Пользователь';
-        const render = `Доброго времени суток, ${username}!`;
-        return render;
-    } catch (error) {
-        console.error("Ошибка рендеринга /start message:", error);
-        return "Произошла ошибка при формировании сообщения старта.";
-    }
+    const username = user?.username || 'Пользователь';
+    const render = `Доброго времени суток, ${username}!`;
+    return render;
 }
 
 /**
@@ -22,18 +15,17 @@ function renderStartMessage(user) {
  *
  * @return {string} информационное сообщение для пользователя.
  */
-function renderHelpMessage() {
-    try {
-        const header = "Список команд:\n";
-        const commandList = commandRegistry.getList()
-                .map(command => `/${command.trigger} - ${command.description}`)
-                .join('\n');
-        const render = header + commandList;
-        return render;
-    } catch (error) {
-        console.error("Ошибка рендеринга /help message:", error);
-        return "Произошла ошибка при формировании сообщения помощи.";
-    }
+function renderHelpMessage(commands = []) {
+    const header = "Список команд:\n";
+    const commandList = (commands && commands.length > 0) 
+        ? commands.map(command => {
+            const trigger = command.trigger ? `/${command.trigger}` : 'Триггер отсутствует';
+            const description = command.description || 'Описание отсутствует';
+            return `${trigger} - ${description}`;
+        }).join('\n')
+        : 'Тут пусто';
+    const render = header + commandList;
+    return render;
 }
 
 export {

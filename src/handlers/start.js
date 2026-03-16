@@ -6,8 +6,12 @@ import { renderStartMessage } from '../services/renders.js';
  * @param {object} ctx контекст обработчика, содержащий информацию о запросе.
  */
 async function startHandler (ctx) {
-    const message = renderStartMessage(ctx.from);
-    await ctx.reply(message);
+    try {
+        const message = renderStartMessage(ctx.from);
+        await ctx.reply(message);
+    } catch (error) {
+        console.error("Ошибка в startHandler:", error);
+    }
 }
 
 export default startHandler;
