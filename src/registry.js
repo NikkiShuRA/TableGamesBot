@@ -13,7 +13,7 @@ class CommandRegistry {
                 throw new Error(`Команда с триггером ${command.trigger} уже зарегистрирована.`);
             }
             this._list.push(command);
-            console.log(`Зарегистрирована команда ${command.trigger} (${command.handler.name})`);
+            console.log(`Зарегистрирована команда ${command.trigger} - ${command.description} (${command.handler.name})`);
             bot.command(command.trigger, command.handler);
         } catch (error) {
             console.error(`Ошибка при регистрации команды ${command.trigger}:`, error);

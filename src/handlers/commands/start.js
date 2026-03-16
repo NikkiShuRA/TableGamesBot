@@ -1,4 +1,7 @@
-import { renderStartMessage } from '../services/renders.js';
+import { renderStartMessage } from '../../services/renders.js';
+
+const trigger = 'start';
+const description = 'Команда старта';
 
 /**
  * Обрабатывает команду старта и отправляет пользователю приветственное сообщение.
@@ -14,4 +17,8 @@ async function startHandler (ctx) {
     }
 }
 
-export default startHandler;
+export default {
+    trigger: trigger,
+    description: description,
+    handler: startHandler
+};

@@ -1,5 +1,8 @@
-import { renderHelpMessage } from '../services/renders.js';
-import CommandRegistry from '../registry.js';
+import { renderHelpMessage } from '../../services/renders.js';
+import CommandRegistry from '../../registry.js';
+
+const trigger = 'help';
+const description = 'Список команд';
 
 /**
  * Обрабатывает команду помощи и отправляет пользователю информационное сообщение.
@@ -15,4 +18,8 @@ async function helpHandler (ctx) {
     }
 }
 
-export default helpHandler;
+export default {
+    trigger: trigger,
+    description: description,
+    handler: helpHandler
+};
