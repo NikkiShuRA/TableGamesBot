@@ -30,8 +30,13 @@
 ### Вспомогательные библиотеки
 *   🚀 ![Pino](https://img.shields.io/badge/Pino-10.3.1-yellow) — высокопроизводительное логирование.
 *   🔐 ![Dotenv](https://img.shields.io/badge/Dotenv-17.3.1-brightgreen) — управление конфигурацией через переменные окружения.
-
+*   🧰 ![Jest](https://img.shields.io/badge/Jest-30.3.0-orange) — тестирование системы.
 ---
+
+### ⚙️ Команды бота (текущий функционал)
+
+- `/start` — приветствие и регистрация пользователя в системе.
+- `/help` — список всех доступных функций и подсказки по использованию.
 
 ### 📦 Быстрый старт
 
@@ -55,7 +60,6 @@
    # --- Supabase Настройки ---
    # Найти в Project Settings -> API
    SUPABASE_URL=https://your-project-id.supabase.co
-   # Используй anon_key для клиента
    SUPABASE_KEY=your-supabase-anon-key
    
    # --- Настройки логирования (Pino) ---
@@ -63,6 +67,15 @@
    LOG_LEVEL=info
    ```
 4. **Запуск:**
+
+    Бот:
     ```bash
-    node src/index.js
+    npm run dev
     ```
+    Тест:
+    ```bash
+    npm run test
+    ```
+
+## 📄 Лицензия
+Распространяется под лицензией MIT. Подробнее в файле [LICENSE](LICENSE).
