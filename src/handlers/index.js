@@ -1,23 +1,16 @@
-const startHandler = require('./start');
-const helpHandler = require('./help');
-const commandRegistry = require('./registry');
+import commands from './commands/index.js';
+import commandRegistry from '../registry.js';
 
-function createCommandObject(trigger, handler, description) {
-    return {
-        trigger: trigger,
-        handler: handler,
-        description: description
-    }
-}
-
+/**
+ * Настраивает обработчики команд для бота.
+ *
+ * @param {object} bot объект бота, для которого настраиваются обработчики.
+ */
 function setupHandlers(bot) {
     commandRegistry.setup(
         bot,
-        [
-            createCommandObject("start", startHandler, "Команда старта"),
-            createCommandObject("help", helpHandler, "Список команд"),
-        ]
+        commands
     );
 }
 
-module.exports = { setupHandlers };
+export default setupHandlers;
