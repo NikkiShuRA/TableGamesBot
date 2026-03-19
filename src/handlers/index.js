@@ -1,5 +1,5 @@
-import commands from './commands/index.js';
-import commandRegistry from '../registry.js';
+import commands from '#handlers/commands/index.js';
+import commandRegistry from '#services/registries/commandsRegistry.js';
 
 /**
  * Настраивает обработчики команд для бота.

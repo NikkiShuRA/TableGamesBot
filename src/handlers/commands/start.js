@@ -1,4 +1,4 @@
-import { renderStartMessage } from '../../services/renders.js';
+import { renderStartMessage } from '#services/renders.js';
 
 const trigger = 'start';
 const description = 'Команда старта';

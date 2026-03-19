@@ -1,5 +1,5 @@
-import { renderHelpMessage } from '../../services/renders.js';
-import CommandRegistry from '../../registry.js';
+import { renderHelpMessage } from '#services/renders.js';
+import CommandRegistry from '#services/registries/commandsRegistry.js';
 
 const trigger = 'help';
 const description = 'Список команд';
@@ -11,7 +11,7 @@ const description = 'Список команд';
  */
 async function helpHandler (ctx) {
     try {
-        const message = renderHelpMessage(CommandRegistry.getList());
+        const message = renderHelpMessage(CommandRegistry.getInfoList());
         await ctx.reply(message);
     } catch (error) {
         console.error("Ошибка в helpHandler:", error);

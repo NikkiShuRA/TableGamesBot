@@ -2,7 +2,7 @@ import { describe, expect, jest, test } from '@jest/globals';
 import { 
     renderStartMessage,
     renderHelpMessage
- } from '../../src/services/renders.js'
+ } from '#services/renders.js'
 
 describe('Логика работы модуля renders', () => {
     describe('Логика работы рендера start', () => {

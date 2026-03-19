@@ -1,8 +1,8 @@
 import 'dotenv/config';
 import { Bot } from 'grammy';
-import config from './config.js';
-import setupHandlers from './handlers/index.js';
-import createLogger from './middlewares/logger.js'; 
+import config from '#config.js';
+import setupHandlers from '#handlers/index.js';
+import createLogger from '#middlewares/logger.js'; 
 
 try {
     if (!config.token) {
